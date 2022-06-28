@@ -31,9 +31,10 @@ export const renderPhoto = (photoWrapper, photo) => {
         id: photo.id,
         className: 'photo__like',
         textContent: photo.likes,
+        likedByUser: photo.liked_by_user,
     });
 
-    if (!photoLike.likeByUser) {
+    if (!photoLike.likedByUser) {
         photoLike.classList.add('photo__like_o');
     }
 
@@ -47,6 +48,8 @@ export const renderPhoto = (photoWrapper, photo) => {
     author.append(avatarAuthor, userName);
     photoControl.append(photoLike, photoDownload);
     photoWrapper.append(img, author, photoControl);
+
+    return photoLike;
 };
 
 
