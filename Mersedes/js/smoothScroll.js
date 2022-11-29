@@ -7,9 +7,15 @@ newArray.forEach(link => {
         event.preventDefault();
         const ID = event.target.getAttribute('href').substr(1);
 
-        document.getElementById(ID).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+        // document.getElementById(ID).scrollIntoView({
+        //     behavior: 'smooth',
+        //     block: 'start'
+        // });
+
+        seamless.scrollIntoView(document.getElementById(ID), {
+          behavior: "smooth",
+          block: "start",
+          inline: "center",
         });
     });
 });
