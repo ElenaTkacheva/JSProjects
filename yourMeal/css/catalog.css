@@ -1,0 +1,18 @@
+.catalog {
+    margin-bottom: 80px;
+}
+.catalog__order {
+    min-height: 48px;
+    margin-bottom: 30px;
+}
+.catalog__title {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+.catalog__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 145px);
+    gap: 10px;
+}
